@@ -1,0 +1,75 @@
+LESSON 1 - Examples and Exercises - Textbook http://www.deeplearningbook.org/
+
+1. IMAGE STYLE
+
+$ conda create -n style-transfer python=3			// create environment
+$ activate style-transfer					// enter environment
+$ conda install tensorflow scipy pillow				// install package
+$ pip install moviepy						// install package
+$ python -c "import imageio; imageio.plugins.ffmpeg.download()"	// import repo
+
+download the zip file from repo: https://github.com/lengstrom/fast-style-transfer
+
+download the rain-princes.ckpt
+
+$ python evaluate.py --checkpoint ./rain-princess.ckpt --in-path <path_to_input_file> --out-path ./output_image.jpg
+
+----------------------------------------------------------------------------------------
+
+2. FLAPPY BIRD RUN
+
+$ conda create --name=flappybird python=2.7			// create environment
+$ source activate flappybird					// enter environment
+$ conda install -c menpo opencv3				// install package
+$ pip install pygame						// install game
+$ pip install tensorflow					// install tensorflow
+$ git clone https://github.com/yenchenlin/DeepLearningFlappyBird.git	
+$ cd DeepLearningFlappyBird
+$ python deep_q_network.py
+
+----------------------------------------------------------------------------------------
+
+3. JUPYTER NOTEBOOKS
+
+
+$ pip install jupyter notebook					// install notebook
+open browser to http://localhost:8888				// access notebook
+
+----------------------------------------------------------------------------------------
+
+4. SOFTMAX FUNCTION
+
+
+We use softmax function to classify data.
+
+	- We get the Linear Function Scores Z1, ...., Zn
+	- For each class i we calculate probability as P(i) = e^Zi/(e^Z1 + ... + e^Zn)
+
+----------------------------------------------------------------------------------------
+
+5. CROSS ENTROPY
+
+
+For each combination we calculate P(x) and P(~x). We multiply the probabilities for each 
+combination. so given three events, 1, 2, and 3. We take all the possible combinations
+and multiply them, for example:
+	
+	P(1) * P(2) * (P~3) = P(s1)
+	P(1) * P(~2) * (P3) = P(s2)
+	P(1) * P(~2) * (P~3) = P(s3) ...
+
+	We know that P(s1) + ... + P(sn) = P(S) = 1
+	Then we consider the negative logarithms of these probabilities
+
+	P(s1) --> -ln(P(s1) this is the ENTROPY. Low probability relates to high ENTROPY.
+
+----------------------------------------------------------------------------------------
+
+6. GRADIENT DESCENT
+
+We take the sigmoid function and calculate the derivative:  σ′(x)=σ(x)(1−σ(x))
+
+
+	
+
+
