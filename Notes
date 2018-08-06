@@ -69,6 +69,37 @@ and multiply them, for example:
 
 We take the sigmoid function and calculate the derivative:  σ′(x)=σ(x)(1−σ(x))
 
+----------------------------------------------------------------------------------------
+
+7. ERRORS
+
+
+	* Under-fitting = error due to bias
+
+	* Over-fitting
+
+To solve this issue we train the model over an increasing amount of data. For each data
+set we measure the Training Error and the Testing Error. The training error will always
+go down wheres the testing error will reach a global minimum. MODEL-COMPLEXITY GRAPH.
+
+Use gradient descent to find the minimum point --> EARLY STOPPING ALGORITHM
+
+LARGE COEFFICIENTS --> OVERFITTING
+
+REGULARIZATION - Penalize big wieghts
+
+	* L1 Reg: lambda(|w1| + ... + |wn|) --> good for feature selection
+	* L2 Reg: lambda(w1^2 + ... + wn^2) --> good for training models
+
+----------------------------------------------------------------------------------------
+
+8. LEARNING RATE
+
+	* HIGH LEARNING RATE - overshooting
+	* LOW LEARNING RATE - slow processing
+
+----------------------------------------------------------------------------------------
+
 
 	
 
